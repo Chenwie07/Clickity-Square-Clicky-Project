@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63664528af115474ea5f4dc1a4921e89, type: 3}
+  m_Name: Boss_10
+  m_EditorClassIdentifier: 
+  _bossName: Zuri
+  _bossPortrait: {fileID: -1710333068, guid: 0880d6fb645170046a8f245c66f1737e, type: 3}
+  _bossColor: {r: 0.31132078, g: 0.0014684978, b: 0.3006282, a: 1}
+  _bossElement: 6
+  _bossHealth: 20000
+  _bossWeakness: 7
