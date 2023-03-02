@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField, Tooltip("List of all Levels Making the Game")]
-    List<LevelData> levels = new List<LevelData>();
+    List<LevelData> levelList = new List<LevelData>();
 
     [SerializeField] IntGameEvent @OnTimeChange; 
     [SerializeField] LevelGameEvent @OnLevelChange;
@@ -18,16 +18,16 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // load level 1 I guess. 
-        currentLevel = levels[0];
+        currentLevel = levelList[0];
         OnLevelChange.Occurred(currentLevel);
         StartCoroutine(Timer(currentLevel.LevelTime));
     }
 
-    IEnumerator Timer(int maxTime)
+    IEnumerator Timer(int _maxTime)
     {
-        print("Timer started, new max time: " + maxTime); 
+        print("Timer started, new max time: " + _maxTime); 
         int timer = 0;
-        while (timer < maxTime /* && (GameOver || LevelComplete) */ )
+        while (timer < _maxTime /* && (GameOver || LevelComplete) */ )
         {
             yield return new WaitForSeconds(1);
             timer++;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     public void LevelWon()
     {
         StopAllCoroutines(); 
-        currentLevel = levels[currentLevel.Level]; // go to next level, our level numbering starts at 1, not 0. 
+        currentLevel = levelList[currentLevel.Level]; // go to next level, our level numbering starts at 1, not 0. 
         OnLevelChange.Occurred(currentLevel); 
     }
     public void BeginBattle()

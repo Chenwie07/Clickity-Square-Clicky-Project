@@ -11,11 +11,13 @@ public class LevelData : ScriptableObject
     [SerializeField] int levelTime; 
     [SerializeField] Sprite bg;
     [SerializeField] BossData boss;
+    [SerializeField] int levelCompleteReward; 
 
     #region GETTING PROPERTIES 
     public int Level => level;
     public int LevelTime => levelTime; 
     public Sprite Background => bg;
     public BossData Boss => boss;
+    public int LevelCompleteReward => levelCompleteReward;
     #endregion
 }

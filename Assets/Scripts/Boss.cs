@@ -25,35 +25,35 @@ public class Boss : MonoBehaviour
         InitializeBoss(_bossData); 
     }
 
-    void InitializeBoss(BossData bData)
+    void InitializeBoss(BossData _bData)
     {
-        GetComponent<SpriteRenderer>().color = bData.BossColor;
-        bossWeakness = bData.BossWeakeness.ToString();
-        bossResistance = bData.BossAttribute.ToString();
-        bossHP = bData.BossHealth;
+        GetComponent<SpriteRenderer>().color = _bData.BossColor;
+        bossWeakness = _bData.BossWeakeness.ToString();
+        bossResistance = _bData.BossAttribute.ToString();
+        bossHP = _bData.BossHealth;
     }
-    public void GetBossData(LevelData data)
+    public void GetBossData(LevelData _data)
     {
-        _bossData = data.Boss;
+        _bossData = _data.Boss;
         InitializeBoss(_bossData); 
     }
 
-    public void ReceiveDamage(int damageDone, string element)
+    public void ReceiveDamage(int _damageDone, string _element)
     {
-        int bonusDamage = 0;
+        int _bonusDamage = 0;
         // depending on the element compared with the boss data, the damage can either heal or damage the boss with a weakness bonus. 
-        if (element == bossWeakness)
+        if (_element == bossWeakness)
         {
-            bonusDamage = Mathf.RoundToInt((float)(damageDone * .5) * Random.Range(1.5f, 3));  // our logic for dealing bonus damage. 
-            print("Bonus Damage caused: " + bonusDamage);
+            _bonusDamage = Mathf.RoundToInt((float)(_damageDone * .5) * Random.Range(1.5f, 3));  // our logic for dealing bonus damage. 
+            print("Bonus Damage caused: " + _bonusDamage);
         }
-        else if (element == bossResistance)
+        else if (_element == bossResistance)
         {
-            CalculateDamage(-damageDone / 2);  // boss absorbs what he's resistant to. 
+            CalculateDamage(-_damageDone / 2);  // boss absorbs what he's resistant to. 
             return;
         }
-        onFullDamage.Occurred(damageDone + bonusDamage); 
-        CalculateDamage(damageDone + bonusDamage);
+        onFullDamage.Occurred(_damageDone + _bonusDamage); 
+        CalculateDamage(_damageDone + _bonusDamage);
     }
 
     private void CalculateDamage(int v)
