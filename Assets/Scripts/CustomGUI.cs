@@ -13,7 +13,10 @@ public class CustomGUI : MonoBehaviour
     [SerializeField] WeaponData currentWeaponData;
     [SerializeField] Image bossPortrait;
     [SerializeField] TextMeshProUGUI bossElement;
-    [SerializeField] TextMeshProUGUI damageDone; 
+    [SerializeField] TextMeshProUGUI damageDone;
+    [SerializeField] TextMeshProUGUI coinCollected;
+
+    private int coins = 0; 
 
 
     [Header("Level Timer")]
@@ -48,6 +51,11 @@ public class CustomGUI : MonoBehaviour
 
     }
 
+    public void UpdatePlayerCoin(int _coinEarned)
+    {
+        coins += _coinEarned;
+        coinCollected.SetText(coins.ToString()); 
+    }
     public void UpdateDamageLog(int dmg)
     {
         damageDone.SetText("Damage: " + dmg); 
@@ -79,7 +87,7 @@ public class CustomGUI : MonoBehaviour
     public void UpdateWeaponDisplay(WeaponData weapon)
     {
         var currentWeaponData = weapon;
-        weaponText.SetText("Equipped: " + currentWeaponData.WeaponName + " DPS: " + currentWeaponData.WeaponDamage + " Element: " + currentWeaponData._element);
+        weaponText.SetText("Equipped: " + currentWeaponData.WeaponName + " \nDPS: " + currentWeaponData.WeaponDamage + " Element: " + currentWeaponData._element);
     }
 
     public void VictoryPanel()

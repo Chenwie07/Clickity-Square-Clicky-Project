@@ -15,4 +15,5 @@ MonoBehaviour:
   _weaponName: Wind Spear
   _weaponElement: 0
   _weaponDamage: 5
-  _weaponPortrait: {fileID: 0}
+  _weaponPortrait: {fileID: -893470655, guid: cc6e4685efa492e4eb9941eac63691f6, type: 3}
+  weaponAttackSfx: {fileID: 8300000, guid: 6daf0c47fb364c04f862c0a8fd0723a9, type: 3}

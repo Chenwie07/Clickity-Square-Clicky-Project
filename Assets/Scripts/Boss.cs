@@ -45,7 +45,6 @@ public class Boss : MonoBehaviour
         if (_element == bossWeakness)
         {
             _bonusDamage = Mathf.RoundToInt((float)(_damageDone * .5) * Random.Range(1.5f, 3));  // our logic for dealing bonus damage. 
-            print("Bonus Damage caused: " + _bonusDamage);
         }
         else if (_element == bossResistance)
         {

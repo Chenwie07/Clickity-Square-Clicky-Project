@@ -15,4 +15,5 @@ MonoBehaviour:
   _weaponName: Beads of the Father
   _weaponElement: 7
   _weaponDamage: 15
-  _weaponPortrait: {fileID: 0}
+  _weaponPortrait: {fileID: -1907703695, guid: cc6e4685efa492e4eb9941eac63691f6, type: 3}
+  weaponAttackSfx: {fileID: 8300000, guid: dc809385ce856c243acb305e177bd54d, type: 3}

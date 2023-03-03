@@ -15,4 +15,5 @@ MonoBehaviour:
   _weaponName: Earth Hammer
   _weaponElement: 2
   _weaponDamage: 5
-  _weaponPortrait: {fileID: 0}
+  _weaponPortrait: {fileID: -1351654342, guid: cc6e4685efa492e4eb9941eac63691f6, type: 3}
+  weaponAttackSfx: {fileID: 8300000, guid: 2b5de9416e524ed44a8ef7ce4c3b3335, type: 3}

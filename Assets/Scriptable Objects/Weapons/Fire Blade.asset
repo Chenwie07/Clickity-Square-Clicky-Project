@@ -15,4 +15,5 @@ MonoBehaviour:
   _weaponName: Fire Blade
   _weaponElement: 3
   _weaponDamage: 5
-  _weaponPortrait: {fileID: 0}
+  _weaponPortrait: {fileID: 321987296, guid: cc6e4685efa492e4eb9941eac63691f6, type: 3}
+  weaponAttackSfx: {fileID: 8300000, guid: f45250eba6291d04f8a7804218fbe7e9, type: 3}

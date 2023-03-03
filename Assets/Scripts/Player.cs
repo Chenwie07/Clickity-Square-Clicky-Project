@@ -5,20 +5,26 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // a player can attack so they need the event. 
-    [SerializeField] AttackEvent @OnDamageEnemy;  
+    [SerializeField] AttackEvent @OnDamageEnemy;
     [SerializeField] WeaponData equippedWeapon;
-    [SerializeField] WeaponEvent onWeaponSwap; 
+    [SerializeField] WeaponEvent onWeaponSwap;
+
+    private AudioSource audioPlayer;
+    private void Awake()
+    {
+        audioPlayer = GetComponent<AudioSource>();
+    }
 
     public void DealDamage()
     {
-        print("The Player attacks, causing weapon damage: " + equippedWeapon.WeaponDamage + " Element: " + equippedWeapon._element);
-        OnDamageEnemy.Occurred(equippedWeapon.WeaponDamage, equippedWeapon._element.ToString()); 
+        OnDamageEnemy.Occurred(equippedWeapon.WeaponDamage, equippedWeapon._element.ToString());
+        audioPlayer.PlayOneShot(equippedWeapon.WeaponSfx);
     }
 
     public void SwapWeapon(WeaponData weapon)
     {
         // changed with default on Click event on Buttons
         equippedWeapon = weapon;
-        onWeaponSwap.Occurred(weapon); 
+        onWeaponSwap.Occurred(weapon);
     }
 }

@@ -15,4 +15,5 @@ MonoBehaviour:
   _weaponName: Claws of Belial
   _weaponElement: 6
   _weaponDamage: 15
-  _weaponPortrait: {fileID: 0}
+  _weaponPortrait: {fileID: 242594123, guid: cc6e4685efa492e4eb9941eac63691f6, type: 3}
+  weaponAttackSfx: {fileID: 8300000, guid: 9ace81a223d55e84d841c728c953368e, type: 3}

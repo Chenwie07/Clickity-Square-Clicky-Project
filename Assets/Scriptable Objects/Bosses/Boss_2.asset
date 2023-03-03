@@ -17,4 +17,4 @@ MonoBehaviour:
   _bossColor: {r: 0.53733534, g: 0.9376376, b: 0.990566, a: 1}
   _bossElement: 2
   _bossHealth: 500
-  _bossWeakness: 0
+  _bossWeakness: 1

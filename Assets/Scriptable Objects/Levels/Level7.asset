@@ -16,3 +16,4 @@ MonoBehaviour:
   levelTime: 60
   bg: {fileID: 21300000, guid: add95e03cc4b004429a50abd0e23b80a, type: 3}
   boss: {fileID: 11400000, guid: e581380e9b1936f498a99c514bbe79df, type: 2}
+  levelCompleteReward: 700

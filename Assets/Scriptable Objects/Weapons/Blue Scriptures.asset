@@ -15,4 +15,5 @@ MonoBehaviour:
   _weaponName: The Blue Scriptures
   _weaponElement: 4
   _weaponDamage: 10
-  _weaponPortrait: {fileID: 0}
+  _weaponPortrait: {fileID: -1142288242, guid: cc6e4685efa492e4eb9941eac63691f6, type: 3}
+  weaponAttackSfx: {fileID: 8300000, guid: dc809385ce856c243acb305e177bd54d, type: 3}

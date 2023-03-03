@@ -15,4 +15,5 @@ MonoBehaviour:
   _weaponName: Water Gun
   _weaponElement: 1
   _weaponDamage: 5
-  _weaponPortrait: {fileID: 0}
+  _weaponPortrait: {fileID: -832187404, guid: cc6e4685efa492e4eb9941eac63691f6, type: 3}
+  weaponAttackSfx: {fileID: 8300000, guid: a068b499d80bc1642aab888fcd060184, type: 3}

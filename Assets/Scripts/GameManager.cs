@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] IntGameEvent @OnTimeChange; 
     [SerializeField] LevelGameEvent @OnLevelChange;
-    [SerializeField] GameEvent @onTimeEnded; 
+    [SerializeField] GameEvent @onTimeEnded;
+    [SerializeField] IntGameEvent onLevelComplete; 
 
     [SerializeField] GameObject background; 
 
@@ -25,7 +26,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Timer(int _maxTime)
     {
-        print("Timer started, new max time: " + _maxTime); 
         int timer = 0;
         while (timer < _maxTime /* && (GameOver || LevelComplete) */ )
         {
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     public void LevelWon()
     {
+        onLevelComplete.Occurred(currentLevel.LevelCompleteReward); 
         StopAllCoroutines(); 
         currentLevel = levelList[currentLevel.Level]; // go to next level, our level numbering starts at 1, not 0. 
         OnLevelChange.Occurred(currentLevel); 
