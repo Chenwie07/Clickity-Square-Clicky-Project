@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63664528af115474ea5f4dc1a4921e89, type: 3}
   m_Name: Boss_6
   m_EditorClassIdentifier: 
-  _bossName: Funwie
-  _bossPortrait: {fileID: 0}
-  _bossColor: {r: 0.9895469, g: 1, b: 0.6556604, a: 1}
-  _bossElement: 4
-  _bossHealth: 3500
-  _bossWeakness: 5
+  bossName: Amun
+  bossPortrait: {fileID: 0}
+  bossColor: {r: 1, g: 0.98832035, b: 0.7783019, a: 1}
+  bossDamageParticle: {fileID: 7725180575849811382, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+  bossElement: 4
+  bossHealth: 3800
+  bossWeakness: 5

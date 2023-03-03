@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63664528af115474ea5f4dc1a4921e89, type: 3}
   m_Name: Boss_7
   m_EditorClassIdentifier: 
-  _bossName: Nala
-  _bossPortrait: {fileID: 0}
-  _bossColor: {r: 0.99303687, g: 1, b: 0.8537736, a: 1}
-  _bossElement: 7
-  _bossHealth: 4500
-  _bossWeakness: 6
+  bossName: Ikike
+  bossPortrait: {fileID: 0}
+  bossColor: {r: 0.22698401, g: 0.0045389733, b: 0.3207547, a: 1}
+  bossDamageParticle: {fileID: 7725180575849811382, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+  bossElement: 6
+  bossHealth: 5000
+  bossWeakness: 7

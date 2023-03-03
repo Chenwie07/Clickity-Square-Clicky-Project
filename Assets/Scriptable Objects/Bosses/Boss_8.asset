@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63664528af115474ea5f4dc1a4921e89, type: 3}
   m_Name: Boss_8
   m_EditorClassIdentifier: 
-  _bossName: Hadiza
-  _bossPortrait: {fileID: 0}
-  _bossColor: {r: 0.18242894, g: 0.019090435, b: 0.31132078, a: 1}
-  _bossElement: 6
-  _bossHealth: 7000
-  _bossWeakness: 7
+  bossName: Kishan
+  bossPortrait: {fileID: 0}
+  bossColor: {r: 0.9810402, g: 1, b: 0.8820755, a: 1}
+  bossDamageParticle: {fileID: 7725180575849811382, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+  bossElement: 7
+  bossHealth: 7000
+  bossWeakness: 6

@@ -9,7 +9,8 @@ public class Boss : MonoBehaviour
     [SerializeField] GameEvent @OnAttacked;
     [SerializeField] IntGameEvent @OnHealthImpact;
     [SerializeField] GameEvent @OnBossKilled;
-    [SerializeField] IntGameEvent @onFullDamage; 
+    [SerializeField] IntGameEvent @onFullDamage;
+    [SerializeField] ParticleSystem bossDamageEffect;
 
 
     #region Setting up some Prerequisite Stats
@@ -31,6 +32,7 @@ public class Boss : MonoBehaviour
         bossWeakness = _bData.BossWeakeness.ToString();
         bossResistance = _bData.BossAttribute.ToString();
         bossHP = _bData.BossHealth;
+        //bossDamageEffect = _bossData.BossDamageEffect;
     }
     public void GetBossData(LevelData _data)
     {
@@ -55,9 +57,9 @@ public class Boss : MonoBehaviour
         CalculateDamage(_damageDone + _bonusDamage);
     }
 
-    private void CalculateDamage(int v)
+    private void CalculateDamage(int _v)
     {
-        bossHP -= v;
+        bossHP -= _v;
         OnHealthImpact.Occurred(bossHP);
         if (bossHP <= 0)
         {
@@ -69,5 +71,8 @@ public class Boss : MonoBehaviour
     private void OnMouseDown()
     {
         OnAttacked.Occurred(); // the player will then deal damage and inturn, raise the ondamage done event using equipped weapon. 
+        var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        bossDamageEffect.transform.position = new Vector3(pos.x, pos.y, 0f); 
+        bossDamageEffect.Play();
     }
 }

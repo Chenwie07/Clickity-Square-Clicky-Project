@@ -40,13 +40,13 @@ public class CustomGUI : MonoBehaviour
         UpdateWeaponDisplay(currentWeaponData);
     }
 
-    public void GetLevelData(LevelData newLevel)
+    public void GetLevelData(LevelData _newLevel)
     {
-        currentLevelData = newLevel;
+        currentLevelData = _newLevel;
         // Initialize
         UpdateHealthDisplay(currentLevelData.Boss.BossHealth);
         UpdateBossPanelInfo();
-        LevelText.SetText("Level: " + newLevel.Level.ToString());
+        LevelText.SetText("Level: " + _newLevel.Level.ToString());
         totalLevelTime = currentLevelData.LevelTime;
 
     }
@@ -56,9 +56,9 @@ public class CustomGUI : MonoBehaviour
         coins += _coinEarned;
         coinCollected.SetText(coins.ToString()); 
     }
-    public void UpdateDamageLog(int dmg)
+    public void UpdateDamageLog(int _dmg)
     {
-        damageDone.SetText("Damage: " + dmg); 
+        damageDone.SetText("Damage: " + _dmg); 
     }
 
     private void UpdateBossPanelInfo()
@@ -68,25 +68,25 @@ public class CustomGUI : MonoBehaviour
         bossElement.SetText("Boss Element: " + currentLevelData.Boss.BossAttribute.ToString());
     }
 
-    public void UpdateHealthDisplay(int newHealth)
+    public void UpdateHealthDisplay(int _newHealth)
     {
-        if (newHealth <= 0)
+        if (_newHealth <= 0)
             bossCurrentHP = 0;
-        else if (newHealth > currentLevelData.Boss.BossHealth)
+        else if (_newHealth > currentLevelData.Boss.BossHealth)
             bossCurrentHP = currentLevelData.Boss.BossHealth;
 
-        bossCurrentHP = newHealth;
+        bossCurrentHP = _newHealth;
         bossHealth.value = (float)bossCurrentHP / (float)currentLevelData.Boss.BossHealth;
     }
 
-    public void UpdateTimer(int newTime)
+    public void UpdateTimer(int _newTime)
     {
-        levelTimer.value = (totalLevelTime - newTime) / totalLevelTime;
+        levelTimer.value = (totalLevelTime - _newTime) / totalLevelTime;
     }
 
-    public void UpdateWeaponDisplay(WeaponData weapon)
+    public void UpdateWeaponDisplay(WeaponData _weapon)
     {
-        var currentWeaponData = weapon;
+        var currentWeaponData = _weapon;
         weaponText.SetText("Equipped: " + currentWeaponData.WeaponName + " \nDPS: " + currentWeaponData.WeaponDamage + " Element: " + currentWeaponData._element);
     }
 

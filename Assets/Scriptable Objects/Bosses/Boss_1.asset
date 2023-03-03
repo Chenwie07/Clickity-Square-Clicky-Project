@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63664528af115474ea5f4dc1a4921e89, type: 3}
   m_Name: Boss_1
   m_EditorClassIdentifier: 
-  _bossName: Kamijo
-  _bossPortrait: {fileID: 0}
-  _bossColor: {r: 0.74695075, g: 0.9716981, b: 0.68293875, a: 1}
-  _bossElement: 0
-  _bossHealth: 250
-  _bossWeakness: 3
+  bossName: Kamijo
+  bossPortrait: {fileID: 0}
+  bossColor: {r: 0.7681328, g: 0.990566, b: 0.58406013, a: 1}
+  bossDamageParticle: {fileID: 7725180575849811382, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+  bossElement: 0
+  bossHealth: 200
+  bossWeakness: 3

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63664528af115474ea5f4dc1a4921e89, type: 3}
   m_Name: Boss_10
   m_EditorClassIdentifier: 
-  _bossName: Zuri
-  _bossPortrait: {fileID: -1710333068, guid: 0880d6fb645170046a8f245c66f1737e, type: 3}
-  _bossColor: {r: 0.31132078, g: 0.0014684978, b: 0.3006282, a: 1}
-  _bossElement: 6
-  _bossHealth: 20000
-  _bossWeakness: 7
+  bossName: Zuri
+  bossPortrait: {fileID: -1710333068, guid: 0880d6fb645170046a8f245c66f1737e, type: 3}
+  bossColor: {r: 0.20018895, g: 0, b: 0.3301887, a: 1}
+  bossDamageParticle: {fileID: 7725180575849811382, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+  bossElement: 6
+  bossHealth: 12500
+  bossWeakness: 7

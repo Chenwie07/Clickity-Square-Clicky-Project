@@ -864,6 +864,81 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &323897679
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1996897995}
+    m_Modifications:
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989909891653395214, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+      propertyPath: m_Name
+      value: DamageEffect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+--- !u!198 &323897680 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7725180575849811382, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+  m_PrefabInstance: {fileID: 323897679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &323897681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2765287650883166193, guid: 15f0acc87b5d7ec48ae46a0c931962c5, type: 3}
+  m_PrefabInstance: {fileID: 323897679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &378570529
 GameObject:
   m_ObjectHideFlags: 0
@@ -5524,7 +5599,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1791824627
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5547,7 +5622,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 323897681}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5596,6 +5672,7 @@ MonoBehaviour:
   OnHealthImpact: {fileID: 11400000, guid: 901574bd0715ef9418d2ed8eac99d5f4, type: 2}
   OnBossKilled: {fileID: 11400000, guid: ddf681917984e174aa3414cb59027bc6, type: 2}
   onFullDamage: {fileID: 11400000, guid: 00eb05d166899004faa40e16e03d22b7, type: 2}
+  bossDamageEffect: {fileID: 323897680}
 --- !u!61 &1996897998
 BoxCollider2D:
   m_ObjectHideFlags: 0
